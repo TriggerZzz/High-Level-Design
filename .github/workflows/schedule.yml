@@ -2,7 +2,7 @@ name: Crypto News Bot
 
 on:
   schedule:
-    - cron: '0 19 * * 1-5'  # Run at 19:00 UTC, Monday–Friday
+    - cron: '0 17 * * 1-5'  # 17:00 UTC Monday–Friday
   workflow_dispatch:
 
 jobs:
@@ -13,7 +13,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.11
+          python-version: '3.11'
       - name: Install requirements
         run: pip install -r requirements.txt
       - name: Run bot
